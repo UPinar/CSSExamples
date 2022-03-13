@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  font-size: 1.8rem;
+  font-family: "Outfit", sans-serif;
+  background: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 32rem;
+  margin: auto auto;
+  padding: 2rem 1.8rem;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 2rem;
+}
+
+.container > * {
+  margin-bottom: 2rem;
+}
+
+/* IMAGE */
+
+.image-container {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.image-container img {
+  opacity: 1;
+  max-width: 100%;
+  border-radius: 1rem;
+  display: block;
+  height: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.image-container svg {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-container:hover {
+  background-color: hsla(178, 100%, 50%, 0.7);
+  cursor: pointer;
+}
+
+.image-container:hover img {
+  opacity: 0.3;
+}
+
+.image-container:hover svg {
+  opacity: 1;
+}
+
+/* 
+LINE */
+
+.lines h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.lines h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.lines p {
+  font-size: 1.6rem;
+  font-weight: 200;
+  color: hsl(215, 51%, 70%);
+}
+
+.information {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  font-size: 1.6rem;
+}
+
+.information svg {
+  margin-right: 0.5rem;
+}
+
+.information .value {
+  display: flex;
+  color: hsl(178, 100%, 50%);
+  align-items: center;
+  font-weight: 400;
+}
+
+.information .time {
+  display: flex;
+  justify-content: end;
+  color: hsl(215, 51%, 70%);
+  align-items: center;
+}
+
+hr {
+  color: hsl(215, 51%, 27%);
+}
+
+.people {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.people-image {
+  justify-content: flex-start;
+  margin-right: 2rem;
+}
+.people img {
+  max-width: 100%;
+  border: 1px #fff solid;
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.people p:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.people p span {
+  color: hsl(215, 51%, 70%);
+}
