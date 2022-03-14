@@ -17,6 +17,10 @@ body {
   background-color: hsl(233, 47%, 7%);
   height: 100vh;
   width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container > * {
@@ -30,6 +34,9 @@ body {
 
   border-radius: 1rem;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .image-container {
@@ -49,6 +56,10 @@ body {
   position: relative;
   opacity: 0.4;
   z-index: 1;
+}
+
+#desktop {
+  display: none;
 }
 
 .code-container {
@@ -110,20 +121,64 @@ body {
   margin-bottom: 0;
 }
 
-.colors {
-  color: hsl(233, 47%, 7%);
-  color: hsl(244, 38%, 16%);
-  color: hsl(277, 64%, 61%);
-  color: hsl(0, 0%, 100%);
-  color: hsla(0, 0%, 100%, 0.75);
-  color: hsla(0, 0%, 100%, 0.6);
+@media screen and (min-width: 850px) {
+  .container {
+    flex-direction: row;
+    max-width: 880px;
+    max-height: 400px;
+    height: 100%;
+    margin: auto 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .image-container {
+    order: 2;
+    margin-bottom: 0;
+    min-width: 425px;
+    width: auto;
+    height: 100%;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  #desktop {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .code-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+
+    padding: 7.5rem 10rem 7.5rem 5rem;
+    /* margin: 7.5rem 10rem 7.5rem 5rem; */
+  }
+
+  .header-container h1 {
+    text-align: start;
+  }
+
+  .header-container p {
+    text-align: start;
+    padding: 0;
+  }
+
+  .information-container {
+    width: 100%;
+    flex-direction: row;
+    margin: 0 2rem 0 0;
+    justify-content: space-between;
+    column-gap: 2rem;
+  }
+  .information-container > * {
+    margin: 0;
+    padding: 0;
+  }
 }
-
-/* - Family: [Inter](https://fonts.google.com/specimen/Inter)
-- Weights: 400, 700
-
-- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
-- Weights: 400 
-
-Font size: 15px
-*/
