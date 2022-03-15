@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Spartan", sans-serif;
+  background-color: hsl(300, 24%, 96%);
+}
+
+body {
+  min-height: 100vh;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 225px;
+  margin: 0 auto;
+}
+
+.container > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* HEAD */
+.head-container {
+  background-image: url(../images/bg-pattern-top-mobile.svg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.head-container > * {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.head-container h1 {
+  /* padding-top: 5rem; */
+  margin-bottom: 1rem;
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+}
+
+.head-container p {
+  color: hsl(303, 10%, 53%);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* RATE */
+
+.rate-container > * {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.rate-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(333, 80%, 67%, 0.1);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.rate-icons {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 1rem;
+  column-gap: 0.5rem;
+  justify-content: center;
+}
+
+.rate-comment {
+  color: hsl(300, 43%, 22%);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* COMMENT */
+.comment-container {
+  background-image: url(../images/bg-pattern-bottom-mobile.svg);
+  background-size: cover;
+  padding-bottom: 3rem;
+}
+
+.comment-container > * {
+  max-width: 200px;
+  margin: 0 auto 1rem;
+}
+
+/* .person-container > * {
+   max-width: 160px; 
+  margin: 2rem auto 0; 
+}  */
+
+.person-container {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 1.5rem;
+}
+
+.person-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  column-gap: 1.5rem;
+  width: 100%;
+}
+
+.person-data .person-image img {
+  width: 2.5rem;
+  border-radius: 5rem;
+}
+
+.person-data .person-info h2 {
+  color: hsl(300, 24%, 96%);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.person-data .person-info p {
+  color: hsl(333, 80%, 67%);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.person-comment {
+  color: hsl(300, 24%, 96%);
+  font-size: 0.8rem;
+}
+
+/* #lastP {
+  padding-bottom: 3rem;
+} */
+
+/* p:last-child {
+  padding-bottom: 5rem;
+} */
+
+/* 
+SON PEOPLE CONTAINER PADDING BOTTOM ALACAK */
+
+.color {
+  color: hsl(300, 43%, 22%);
+  color: hsl(333, 80%, 67%);
+  color: hsl(303, 10%, 53%);
+  color: hsl(300, 24%, 96%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* 
+Font size: 15px -> 1.5rem
+Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+Weights: 400, 500, 700 
+*/
