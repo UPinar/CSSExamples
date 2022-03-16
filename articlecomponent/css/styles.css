@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: calc(62.5% + 0.3vw);
+  /* font-size: 62.5%; */
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  min-height: 100vh;
+  max-width: 37.5rem;
+  margin: 0 auto;
+  font-size: 1.3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  margin: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* IMAGE */
+
+.image-container {
+  height: 22rem;
+  overflow: hidden;
+}
+
+.image-container img {
+}
+
+.limit-container {
+  max-width: calc(100% - 7.5rem);
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* CODE */
+
+.code-container h1 {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.code-container p {
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  line-height: 2.2rem;
+}
+
+/* PEOPLE */
+
+.people-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.peopleimage-container {
+  margin-right: 1.5rem;
+}
+.peopleimage-container img {
+  width: 5rem;
+  border-radius: 100%;
+}
+
+.peopleinfo-container h2 {
+  color: hsl(217, 19%, 35%);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.peopleinfo-container p {
+  color: hsl(212, 23%, 69%);
+  font-weight: 500;
+}
+
+.goto-container {
+  margin-left: auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background-color: hsl(210, 46%, 95%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goto-container img {
+  width: 2rem;
+}
+
+@media screen and (min-width: 1100px) {
+  html {
+    font-size: calc(62.5% + 0.1vw);
+  }
+
+  body {
+    max-width: 90rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: calc(30rem + 0.3vw);
+    width: 100%;
+  }
+
+  /* IMAGE */
+
+  .image-container {
+    height: 100%;
+    display: flex;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .limit-container {
+    margin: 4rem 5rem 2rem;
+  }
+}
+
+.color {
+  color: hsl(217, 19%, 35%);
+  color: hsl(214, 17%, 51%);
+  color: hsl(212, 23%, 69%);
+  color: hsl(210, 46%, 95%);
+}
+
+/* - Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700 
+
+Shift the overall look and feel by adding these wonderful touches to furniture in your home Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete. Michelle Appleton 28 Jun 2020 Share
+*/
