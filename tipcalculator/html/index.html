@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Tip Calculator App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head-container">
+        <h1>SPLI<br />TTER</h1>
+      </div>
+      <form>
+        <div class="calculation-container">
+          <div class="bill-container">
+            <h2>Bill</h2>
+            <div class="amount-container">
+              <img src="../images/icon-dollar.svg" alt="Dollar Icon" />
+              <input id="bill-input" type="text" maxlength="7" />
+            </div>
+          </div>
+          <div class="select-tip-container">
+            <h2>Select Tip %</h2>
+            <div class="tip-ratio-container">
+              <div class="tip-ratios tip-button" id="tip5">
+                <p>5%</p>
+              </div>
+              <div class="tip-ratios tip-button" id="tip10">
+                <p>10%</p>
+              </div>
+              <div class="tip-ratios tip-button" id="tip15">
+                <p>15%</p>
+              </div>
+              <div class="tip-ratios tip-button" id="tip25">
+                <p>25%</p>
+              </div>
+              <div class="tip-ratios tip-button" id="tip50">
+                <p>50%</p>
+              </div>
+              <div class="tip-ratios tip-text">
+                <input
+                  type="text"
+                  placeholder="Custom"
+                  id="tip-input"
+                  maxlength="2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="people-container">
+            <h2>Number of People</h2>
+            <div class="people-count-container">
+              <img src="../images/icon-person.svg" alt="People Icon" />
+              <input id="number-input" maxlength="3" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="limit-container">
+          <div class="result-container">
+            <div class="tip-container">
+              <div class="tip-text-container">
+                <h2>Tip Amount</h2>
+                <h3>/ person</h3>
+              </div>
+              <div class="tip-value-container">
+                <p id="tip-amount">$4.27</p>
+              </div>
+            </div>
+            <div class="total-container">
+              <div class="total-text-container">
+                <h2>Total</h2>
+                <h3>/ person</h3>
+              </div>
+              <div class="total-value-container">
+                <p id="total-amount">$32.79</p>
+              </div>
+            </div>
+            <div class="reset-container">
+              <button id="resetButton" type="reset">RESET</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="../js/my-script.js"></script>
+  </body>
+</html>
