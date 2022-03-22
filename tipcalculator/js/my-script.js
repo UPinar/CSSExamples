@@ -351,7 +351,13 @@ function clickedResetButton(e){
     buttonTip25.style.background = 'hsl(183, 100%, 15%)';
     tipAmount.innerHTML = `$0`
     totalAmount.innerHTML = `$0`
+
+    billInput.value = '';
+    tipInput.value = '';
+    numberInput.value = '';
+   
 }
+
 
 
 

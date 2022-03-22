@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+form {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 input {
   box-sizing: border-box;
   width: 100%;
@@ -12,6 +18,7 @@ input {
   outline: none;
   text-align: right;
   background-color: hsl(189, 41%, 97%);
+  cursor: pointer;
 }
 
 button {
@@ -25,38 +32,58 @@ html {
 
 body {
   min-height: 100vh;
-  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: hsl(185, 41%, 84%);
 }
-
-/* .body-2 {
-    min-height: 100vh;
-    width: 1100px;
-    margin: 0 auto;
-  } */
 
 img {
   max-width: 100%;
   display: block;
 }
 
+.container {
+  height: 100vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2.5rem;
+  margin: 0 2rem;
+}
+
+/* HEAD */
+
 .head-container {
   background-color: hsl(185, 41%, 84%);
+  position: relative;
+  z-index: 1;
 }
 
 .head-container h1 {
-  padding: 3rem;
+  padding: 5rem 3rem;
   color: hsl(183, 100%, 15%);
   font-size: 2.4rem;
   text-align: center;
   letter-spacing: 1rem;
 }
 
+/* FORM */
+
+/* CALCULATION */
+
+.form-container {
+  position: relative;
+  bottom: 2rem;
+  z-index: 2;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2.5rem;
+}
+
 .calculation-container {
-  padding: 2.5rem 3rem;
+  padding: 4rem 3rem;
 }
 
 .calculation-container > *:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .calculation-container h2 {
@@ -149,18 +176,22 @@ img {
   -moz-appearance: textfield;
 }
 
+/* 
+RESULT */
+
 .limit-container {
   padding: 0 2rem;
   margin-bottom: 1rem;
 }
+
 .result-container {
   background-color: hsl(183, 100%, 15%);
-  padding: 3rem 2.25rem 1rem;
+  padding: 5rem 2.25rem 1rem;
   border-radius: 1.5rem;
 }
 
 .result-container > * {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .result-container h2 {
@@ -182,19 +213,22 @@ img {
   margin-top: 2rem;
 }
 
-.result-container .reset-container button {
+.result-container .reset-container {
   cursor: pointer;
   padding: 1rem 0;
   background-color: hsl(172, 67%, 45%);
   border-radius: 0.5rem;
-  border: none;
+}
+
+.result-container .reset-container p {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   color: hsl(183, 100%, 15%);
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+}
+
+#resetButton:hover {
+  background-color: hsl(172, 67%, 45%) !important;
 }
 
 .result-container .tip-container {
@@ -207,6 +241,51 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 50rem) {
+  body {
+    max-width: 120rem;
+    margin: auto auto;
+  }
+
+  .container {
+    display: grid;
+    height: 100%;
+  }
+
+  .form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .calculation-container {
+    padding: 5rem 5rem;
+  }
+
+  .limit-container {
+    padding: 2.5rem 2.5rem;
+    margin: 0;
+  }
+
+  .result-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 5rem 5rem;
+  }
+
+  .result-container > * {
+    margin-bottom: 5rem;
+  }
+
+  .result-container p {
+    font-size: 5rem;
+  }
+
+  .result-container .reset-container {
+    margin-top: auto;
+  }
 }
 
 .colors {
