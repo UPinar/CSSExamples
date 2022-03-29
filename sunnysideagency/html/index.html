@@ -20,11 +20,12 @@
         <div class="logo-container">
           <img src="../images/logo.svg" alt="Sunnyside Logo" />
           <img
+            id="hamburgerButton"
             class="hamburger"
             src="../images/icon-hamburger.svg"
             alt="Menu Logo"
           />
-          <div class="hamburger-container">
+          <div class="hamburger-container" id="hamburgerContainer">
             <p class="hamburger__item">About</p>
             <p class="hamburger__item">Services</p>
             <p class="hamburger__item">Projects</p>
@@ -37,10 +38,13 @@
       </div>
       <div class="card-container-first">
         <div class="card__image">
-          <img
-            src="../images/mobile/image-transform.jpg"
-            alt="Image about Transform"
-          />
+          <picture>
+            <source
+              media="(min-width: 615px)"
+              srcset="../images/desktop/image-transform.jpg"
+            />
+            <img src="../images/mobile/image-transform.jpg" />
+          </picture>
         </div>
         <div class="card__text">
           <h2>Transform your brand</h2>
@@ -54,10 +58,16 @@
       </div>
       <div class="card-container-first">
         <div class="card__image">
-          <img
-            src="../images/mobile/image-stand-out.jpg"
-            alt="Stand out audience"
-          />
+          <picture>
+            <source
+              media="(min-width: 615px)"
+              srcset="../images/desktop/image-stand-out.jpg"
+            />
+            <img
+              src="../images/mobile/image-stand-out.jpg"
+              alt="Stand out audience"
+            />
+          </picture>
         </div>
         <div class="card__text">
           <h2>Stand out to the right audience</h2>
@@ -69,88 +79,116 @@
           <h3 id="color-red">Learn more</h3>
         </div>
       </div>
-      <div class="card-container-second">
-        <div class="card__image1">
-          <h2>Graphic Design</h2>
-          <p>
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients’
-            attention.
-          </p>
+      <div class="second-cards-container">
+        <div class="card-container-second">
+          <div class="card__image1">
+            <h2>Graphic Design</h2>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="card-container-second">
-        <div class="card__image2">
-          <h2>Photography</h2>
-          <p>
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
+        <div class="card-container-second">
+          <div class="card__image2">
+            <h2>Photography</h2>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
         </div>
       </div>
       <div class="client-container">
         <h4>Client testimonials</h4>
-        <div class="client__card">
-          <div class="client__image">
-            <img src="../images/image-emily.jpg" alt="Image of Emily" />
+        <div class="client__cards-container">
+          <div class="client__card">
+            <div class="client__image">
+              <img src="../images/image-emily.jpg" alt="Image of Emily" />
+            </div>
+            <p class="client__comment">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <div class="client__info">
+              <p class="client__name">Emily R.</p>
+              <p class="client__position">Marketing Director</p>
+            </div>
           </div>
-          <p class="client__comment">
-            We put our trust in Sunnyside and they delivered, making sure our
-            needs were met and deadlines were always hit.
-          </p>
-          <div class="client__info">
-            <p class="client__name">Emily R.</p>
-            <p class="client__position">Marketing Director</p>
+          <div class="client__card">
+            <div class="client__image">
+              <img src="../images/image-thomas.jpg" alt="Image of Thomas" />
+            </div>
+            <p class="client__comment">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <div class="client__info">
+              <p class="client__name">Thomas S.</p>
+              <p class="client__position">Chief Operating Officer</p>
+            </div>
           </div>
-        </div>
-        <div class="client__card">
-          <div class="client__image">
-            <img src="../images/image-thomas.jpg" alt="Image of Thomas" />
-          </div>
-          <p class="client__comment">
-            Sunnyside’s enthusiasm coupled with their keen interest in our
-            brand’s success made it a satisfying and enjoyable experience.
-          </p>
-          <div class="client__info">
-            <p class="client__name">Thomas S.</p>
-            <p class="client__position">Chief Operating Officer</p>
-          </div>
-        </div>
-        <div class="client__card">
-          <div class="client__image">
-            <img src="../images/image-jennie.jpg" alt="Image of Jennie" />
-          </div>
-          <p class="client__comment">
-            Incredible end result! Our sales increased over 400% when we worked
-            with Sunnyside. Highly recommended!
-          </p>
-          <div class="client__info">
-            <p class="client__name">Jennie F.</p>
-            <p class="client__position">Business Owner</p>
+          <div class="client__card">
+            <div class="client__image">
+              <img src="../images/image-jennie.jpg" alt="Image of Jennie" />
+            </div>
+            <p class="client__comment">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <div class="client__info">
+              <p class="client__name">Jennie F.</p>
+              <p class="client__position">Business Owner</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="photos-container">
-        <img
-          class="photo-1"
-          src="../images/mobile/image-gallery-milkbottles.jpg"
-          alt="Milk Bottles"
-        />
-        <img
-          class="photo-2"
-          src="../images/mobile/image-gallery-orange.jpg"
-          alt="Orange"
-        />
-        <img
-          class="photo-3"
-          src="../images/mobile/image-gallery-cone.jpg"
-          alt="Cone"
-        />
-        <img
-          class="photo-4"
-          src="../images/mobile/image-gallery-sugar-cubes.jpg"
-          alt="Sugar Cubes"
-        />
+        <picture>
+          <source
+            media="(min-width: 615px)"
+            srcset="../images/desktop/image-gallery-milkbottles.jpg"
+          />
+          <img
+            class="photo-1"
+            src="../images/mobile/image-gallery-milkbottles.jpg"
+            alt="Milk Bottles"
+          />
+        </picture>
+        <picture>
+          <source
+            media="(min-width: 615px)"
+            srcset="../images/desktop/image-gallery-orange.jpg"
+          />
+          <img
+            class="photo-2"
+            src="../images/mobile/image-gallery-orange.jpg"
+            alt="Orange"
+          />
+        </picture>
+        <picture>
+          <source
+            media="(min-width: 615px)"
+            srcset="../images/desktop/image-gallery-cone.jpg"
+          />
+          <img
+            class="photo-3"
+            src="../images/mobile/image-gallery-cone.jpg"
+            alt="Cone"
+          />
+        </picture>
+        <picture>
+          <source
+            media="(min-width: 615px)"
+            srcset="../images/desktop/image-gallery-sugarcubes.jpg"
+          />
+          <img
+            class="photo-4"
+            src="../images/mobile/image-gallery-sugar-cubes.jpg"
+            alt="Sugar Cubes"
+          />
+        </picture>
       </div>
       <div class="footer-container">
         <div class="footer__title">
@@ -169,5 +207,6 @@
         </div>
       </div>
     </div>
+    <script src="../js/my-script.js"></script>
   </body>
 </html>
