@@ -13,9 +13,6 @@
 
   --font-p: "Barlow", sans-serif;
   --font-bold: "Fraunces", serif;
-
-  /* font-family: "Barlow", sans-serif;   600
-     font-family: "Fraunces", serif;      700 900*/
 }
 
 *,
@@ -183,36 +180,37 @@ html {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .card-container-first .card__text h3::after {
   content: "";
   position: absolute;
+  border-radius: 1rem;
   width: 13rem;
   height: 0.8rem;
   margin-top: 1.7rem;
 
-  /* position: absolute;
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, 0); */
+  transform: translate(-50%, 0);
 
-  left: 0;
+  /* left: 0;
   right: 0;
   margin-left: auto;
-  margin-right: auto;
-  border-radius: 1rem;
+  margin-right: auto; */
 }
 
 /* GIVING H3 VALUES COLORS */
 
 #color-yellow::after {
   background-color: var(--clr-primary-200);
-  opacity: 0.2;
+  opacity: var(--opacity, 0.2);
 }
 
 #color-red::after {
   background-color: var(--clr-primary-100);
-  opacity: 0.2;
+  opacity: var(--opacity, 0.2);
 }
 
 .card-container-second .card__image1 {
@@ -356,9 +354,14 @@ html {
 }
 
 .footer-container .footer__item {
+  text-decoration: none;
   font-size: 1.5rem;
   font-family: var(--font-p);
   color: var(--clr-primary-300);
+}
+
+.footer-container .footer__item:hover {
+  color: var(--clr-neutral-500);
 }
 
 .footer__logos {
@@ -367,6 +370,10 @@ html {
   column-gap: 2rem;
   margin-top: 7.5rem;
   margin-bottom: 4rem;
+}
+
+.footer__logos a {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 700px) {
@@ -393,12 +400,18 @@ html {
   }
 
   .logo-container .hamburger-container {
-    display: flex;
+    display: flex !important;
     flex-direction: row;
 
     position: unset;
     padding: 0;
     background-color: transparent;
+  }
+
+  .hamburger-container .hamburger__button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+
+    color: white;
   }
 
   .hamburger-container > * {
