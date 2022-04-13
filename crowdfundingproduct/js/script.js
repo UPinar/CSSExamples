@@ -59,6 +59,31 @@ else{
 
 
 
+/*
+Collect every card inside information-container
+Then check how many left 
+if one has 0 left change that cards opacity and
+value inside button to "out of stock"
+*/
+
+
+const cards = document.querySelectorAll('.information__card');
+
+
+for (const card of cards){
+    const cardLeftValue = parseInt(card.querySelector('.card__count .count').innerHTML);
+
+    if(cardLeftValue === 0){
+        card.style.opacity = "0.3";
+
+        let cardButtonValue = card.querySelector('.card__button');
+        cardButtonValue.innerHTML = "Out of Stock";
+
+    }
+}
+
+
+
 
 
 
